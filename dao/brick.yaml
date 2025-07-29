@@ -1,0 +1,19 @@
+name: dao
+description: Vorlage für ein DAO
+
+version: 0.1.0+1
+
+environment:
+  mason: ^0.1.1
+
+vars:
+  name:
+    type: string
+    description: Name des DAOs
+    prompt: Welche Entität verwaltet das DAO?
+  prisma:
+    type: boolean
+    default: true
+    description: Auswahl, ob es sich um ein prisma-DAO oder ein SecureStorage-DAO handelt
+    # Enums funktionieren derzeit nicht https://github.com/felangel/mason/issues/1385
+    prompt: Soll das DAO Prisma oder FlutterSecureStorage verwenden (yes für Prisma, no für FlutterSecureStorage)?
